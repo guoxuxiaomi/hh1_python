@@ -101,11 +101,11 @@ def command_linux_pro_second(command):
 # upload_zk();
 cmd_result = ''
 cmd_result_last = ''
-# upload(host = '172.27.61.11')
-# cmd_result = command_linux('pgrep -f tomcat')
-# cmd_result = command_linux('kill -9 '+cmd_result)
-# cmd_result = command_linux('rm -rf /opt/apache-tomcat-7.0.76/webapps/czd-server')
-# cmd_result = command_linux("bash -l -c '/opt/apache-tomcat-7.0.76/bin/startup.sh';cd /opt/apache-tomcat-7.0.76/webapps/;tar -xvzPf czd_share.tar.gz czd_share")
+upload(host = '172.27.61.11')
+cmd_result = command_linux('pgrep -f tomcat')
+cmd_result = command_linux('kill -9 '+cmd_result)
+cmd_result = command_linux('rm -rf /opt/apache-tomcat-7.0.76/webapps/czd-server')
+cmd_result = command_linux("bash -l -c '/opt/apache-tomcat-7.0.76/bin/startup.sh';cd /opt/apache-tomcat-7.0.76/webapps/;tar -xvzPf czd_share.tar.gz czd_share")
 
 upload_pro(host='172.27.62.11')
 cmd_result = command_linux_pro('pgrep -f tomcat')
@@ -113,22 +113,22 @@ cmd_result = command_linux_pro('kill -9 '+cmd_result)
 cmd_result = command_linux_pro('rm -rf /opt/apache-tomcat-8.0.26/webapps/czd-server')
 cmd_result = command_linux_pro("bash -l -c '/opt/apache-tomcat-8.0.26/bin/startup.sh';cd /opt/apache-tomcat-8.0.26/webapps/;tar -xvzPf czd_share.tar.gz czd_share")
 
-# upload_pro(host='172.27.62.21')
-# cmd_result = command_linux_pro_second('pgrep -f tomcat')
-# cmd_result = command_linux_pro_second('kill -9 '+cmd_result)
-# cmd_result = command_linux_pro_second('rm -rf /opt/apache-tomcat-8.0.26/webapps/czd-server')
-# cmd_result = command_linux_pro_second("bash -l -c '/opt/apache-tomcat-8.0.26/bin/startup.sh';cd /opt/apache-tomcat-8.0.26/webapps/;tar -xvzPf czd_share.tar.gz czd_share")
+upload_pro(host='172.27.62.21')
+cmd_result = command_linux_pro_second('pgrep -f tomcat')
+cmd_result = command_linux_pro_second('kill -9 '+cmd_result)
+cmd_result = command_linux_pro_second('rm -rf /opt/apache-tomcat-8.0.26/webapps/czd-server')
+cmd_result = command_linux_pro_second("bash -l -c '/opt/apache-tomcat-8.0.26/bin/startup.sh';cd /opt/apache-tomcat-8.0.26/webapps/;tar -xvzPf czd_share.tar.gz czd_share")
 
-# upload(host = '172.27.61.51')
-# cmd_result = command_linux_second('pgrep -f tomcat')
-# cmd_result = command_linux_second('kill -9 '+cmd_result)
-# cmd_result = command_linux_second('rm -rf /opt/apache-tomcat-7.0.76/webapps/czd-server')
-# cmd_result = command_linux_second("bash -l -c '/opt/apache-tomcat-7.0.76/bin/startup.sh';cd /opt/apache-tomcat-7.0.76/webapps/;tar -xvzPf czd_share.tar.gz czd_share")
+upload(host = '172.27.61.51')
+cmd_result = command_linux_second('pgrep -f tomcat')
+cmd_result = command_linux_second('kill -9 '+cmd_result)
+cmd_result = command_linux_second('rm -rf /opt/apache-tomcat-7.0.76/webapps/czd-server')
+cmd_result = command_linux_second("bash -l -c '/opt/apache-tomcat-7.0.76/bin/startup.sh';cd /opt/apache-tomcat-7.0.76/webapps/;tar -xvzPf czd_share.tar.gz czd_share")
 
-# while True:
-#     cmd_result = command_linux_second("tail -n 1 /opt/apache-tomcat-7.0.76/logs/catalina.out")
-#     if(cmd_result_last != cmd_result):
-#         cmd_result_last = cmd_result
-#         print(cmd_result)
+while True:
+    cmd_result = command_linux_second("tail -n 1 /opt/apache-tomcat-7.0.76/logs/catalina.out")
+    if(cmd_result_last != cmd_result):
+        cmd_result_last = cmd_result
+        print(cmd_result)
 
 
