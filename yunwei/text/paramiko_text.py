@@ -2,7 +2,6 @@
 import paramiko
 import sys,os
 
-
 def upload(host):
     t = paramiko.Transport((host, 22))
     t.connect(username='root', password='redhat')
