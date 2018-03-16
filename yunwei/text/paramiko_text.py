@@ -19,6 +19,7 @@ def upload_pro(host):
              '/opt/apache-tomcat-8.0.26/webapps/czd-server.war')
     sftp.close()
     t.close()
+
 def upload_zk():
     t = paramiko.Transport(('172.27.62.11', 22))
     t.connect(username='root', password='redhat')
